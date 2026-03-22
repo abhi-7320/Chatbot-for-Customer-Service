@@ -217,7 +217,7 @@ This project is licensed under the **MIT License** - see the LICENSE file for de
 
 ## 👨‍💻 Author
 
-**Abhishek** - [GitHub Profile](https://github.com/abhi-7320)
+**Priyanshu Kumar** - [GitHub Profile](https://github.com/abhi-7320)
 
 ---
 
