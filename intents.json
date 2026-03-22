@@ -1,0 +1,69 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Hey"],
+      "responses": ["Hello! How can I help you today?", "Hi there, what can I do for you?", "Greetings! How can I assist you?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye", "I am leaving", "Have a Good day"],
+      "responses": ["See you later, thanks for visiting!", "Have a nice day!", "Bye! Come back again soon."]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+      "responses": ["Happy to help!", "Anytime!", "My pleasure!"]
+    },
+    {
+      "tag": "hours",
+      "patterns": ["What are your hours?", "When are you open?", "What are your operating hours?"],
+      "responses": ["We are open from 9 AM to 6 PM, Monday to Friday.", "Our business hours are 9 AM to 6 PM on weekdays."]
+    },
+    {
+      "tag": "location",
+      "patterns": ["Where are you located?", "What is your address?", "How can I find you?"],
+      "responses": ["We are located at 123 Tech Lane, Silicon Valley.", "Our main office is at 123 Tech Lane."]
+    },
+    {
+      "tag": "payments",
+      "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?"],
+      "responses": ["We accept Visa, Mastercard, and American Express.", "We accept most major credit cards."]
+    },
+    {
+      "tag": "delivery",
+      "patterns": ["How long does delivery take?", "How do you ship?", "What is the delivery time?"],
+      "responses": ["Delivery usually takes 3-5 business days.", "Shipping takes 3-5 business days via standard mail."]
+    },
+    {
+      "tag": "returns",
+      "patterns": ["How do I return an item?", "I want a refund", "What is your return policy?"],
+      "responses": ["You can return any item within 30 days of purchase. Please visit our returns portal for more info.", "Our refund policy allows for returns within 30 days. Make sure the item is in its original condition."]
+    },
+    {
+      "tag": "order_status",
+      "patterns": ["Where is my order?", "Track my package", "Status of my delivery"],
+      "responses": ["You can track your order by logging into your account and visiting the 'My Orders' section.", "Please provide your order ID, and I can check the status for you."]
+    },
+    {
+      "tag": "account_help",
+      "patterns": ["I can't log in", "Reset my password", "Forgot my password"],
+      "responses": ["You can reset your password by clicking 'Forgot Password' on the login page.", "For account security, please use our password recovery tool to regain access."]
+    },
+    {
+      "tag": "promotions",
+      "patterns": ["Are there any discounts?", "Do you have a coupon code?", "Current offers"],
+      "responses": ["You can find our latest offers on the homepage or sign up for our newsletter for exclusive discounts!", "Check out our 'Sale' section for current deals and promotions."]
+    },
+    {
+      "tag": "contact",
+      "patterns": ["Speak to a human", "Call customer care", "How to contact support?"],
+      "responses": ["You can call our support team at 1-800-ASSIST-ME or email support@assistbot.com.", "Our support agents are available via phone and email during business hours."]
+    },
+    {
+      "tag": "feedback",
+      "patterns": ["I want to give feedback", "I have a complaint", "Excellent service!"],
+      "responses": ["Thank you for your feedback! We're always looking to improve our service.", "We value your input. Please let us know how we can do better or what you enjoyed."]
+    }
+  ]
+}

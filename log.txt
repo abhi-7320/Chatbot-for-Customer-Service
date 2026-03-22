@@ -1,0 +1,430 @@
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\Lenovo\AppData\Roaming\nltk_data...
+[nltk_data]   Unzipping tokenizers\punkt.zip.
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\Lenovo\AppData\Roaming\nltk_data...
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\Lenovo\AppData\Roaming\nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+ * Debugger is active!
+ * Debugger PIN: 942-952-769
+127.0.0.1 - - [22/Mar/2026 12:17:59] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:17:59] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:17:59] "GET /script.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:18:04] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [22/Mar/2026 12:18:32] "POST /chat HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive\Desktop\Chatbot for Customer Service\app.py", line 27, in chat
+    response = bot.get_response(user_input)
+  File "c:\Users\Lenovo\OneDrive\Desktop\Chatbot for Customer Service\chatbot.py", line 32, in get_response
+    processed_input = self.preprocess(user_input)
+  File "c:\Users\Lenovo\OneDrive\Desktop\Chatbot for Customer Service\chatbot.py", line 27, in preprocess
+    tokens = nltk.word_tokenize(text)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\__init__.py", line 142, in word_tokenize
+    sentences = [text] if preserve_line else sent_tokenize(text, language)
+                                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\__init__.py", line 119, in sent_tokenize
+    tokenizer = _get_punkt_tokenizer(language)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\__init__.py", line 105, in _get_punkt_tokenizer
+    return PunktTokenizer(language)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\punkt.py", line 1744, in __init__
+    self.load_lang(lang)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\punkt.py", line 1749, in load_lang
+    lang_dir = find(f"tokenizers/punkt_tab/{lang}/")
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\data.py", line 696, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource 'punkt_tab' not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  >>> import nltk
+  >>> nltk.download('punkt_tab')
+
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load 'tokenizers/punkt_tab/english/'
+
+  Searched in:
+    - 'C:\\Users\\Lenovo/nltk_data'
+    - 'C:\\Python314\\nltk_data'
+    - 'C:\\Python314\\share\\nltk_data'
+    - 'C:\\Python314\\lib\\nltk_data'
+    - 'C:\\Users\\Lenovo\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+127.0.0.1 - - [22/Mar/2026 12:18:46] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [22/Mar/2026 12:18:46] "GET /style.css HTTP/1.1" 304 -
+127.0.0.1 - - [22/Mar/2026 12:18:46] "GET /script.js HTTP/1.1" 304 -
+127.0.0.1 - - [22/Mar/2026 12:19:02] "POST /chat HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive\Desktop\Chatbot for Customer Service\app.py", line 27, in chat
+    response = bot.get_response(user_input)
+  File "c:\Users\Lenovo\OneDrive\Desktop\Chatbot for Customer Service\chatbot.py", line 32, in get_response
+    processed_input = self.preprocess(user_input)
+  File "c:\Users\Lenovo\OneDrive\Desktop\Chatbot for Customer Service\chatbot.py", line 27, in preprocess
+    tokens = nltk.word_tokenize(text)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\__init__.py", line 142, in word_tokenize
+    sentences = [text] if preserve_line else sent_tokenize(text, language)
+                                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\__init__.py", line 119, in sent_tokenize
+    tokenizer = _get_punkt_tokenizer(language)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\__init__.py", line 105, in _get_punkt_tokenizer
+    return PunktTokenizer(language)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\punkt.py", line 1744, in __init__
+    self.load_lang(lang)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\punkt.py", line 1749, in load_lang
+    lang_dir = find(f"tokenizers/punkt_tab/{lang}/")
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\data.py", line 696, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource 'punkt_tab' not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  >>> import nltk
+  >>> nltk.download('punkt_tab')
+
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load 'tokenizers/punkt_tab/english/'
+
+  Searched in:
+    - 'C:\\Users\\Lenovo/nltk_data'
+    - 'C:\\Python314\\nltk_data'
+    - 'C:\\Python314\\share\\nltk_data'
+    - 'C:\\Python314\\lib\\nltk_data'
+    - 'C:\\Users\\Lenovo\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+127.0.0.1 - - [22/Mar/2026 12:20:09] "POST /chat HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive\Desktop\Chatbot for Customer Service\app.py", line 27, in chat
+    response = bot.get_response(user_input)
+  File "c:\Users\Lenovo\OneDrive\Desktop\Chatbot for Customer Service\chatbot.py", line 32, in get_response
+    processed_input = self.preprocess(user_input)
+  File "c:\Users\Lenovo\OneDrive\Desktop\Chatbot for Customer Service\chatbot.py", line 27, in preprocess
+    tokens = nltk.word_tokenize(text)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\__init__.py", line 142, in word_tokenize
+    sentences = [text] if preserve_line else sent_tokenize(text, language)
+                                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\__init__.py", line 119, in sent_tokenize
+    tokenizer = _get_punkt_tokenizer(language)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\__init__.py", line 105, in _get_punkt_tokenizer
+    return PunktTokenizer(language)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\punkt.py", line 1744, in __init__
+    self.load_lang(lang)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\punkt.py", line 1749, in load_lang
+    lang_dir = find(f"tokenizers/punkt_tab/{lang}/")
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\data.py", line 696, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource 'punkt_tab' not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  >>> import nltk
+  >>> nltk.download('punkt_tab')
+
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load 'tokenizers/punkt_tab/english/'
+
+  Searched in:
+    - 'C:\\Users\\Lenovo/nltk_data'
+    - 'C:\\Python314\\nltk_data'
+    - 'C:\\Python314\\share\\nltk_data'
+    - 'C:\\Python314\\lib\\nltk_data'
+    - 'C:\\Users\\Lenovo\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+127.0.0.1 - - [22/Mar/2026 12:20:27] "GET /chat HTTP/1.1" 404 -
+127.0.0.1 - - [22/Mar/2026 12:20:36] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:20:36] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:20:37] "GET /script.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:20:43] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [22/Mar/2026 12:21:03] "OPTIONS /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:21:03] "POST /chat HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive\Desktop\Chatbot for Customer Service\app.py", line 27, in chat
+    response = bot.get_response(user_input)
+  File "c:\Users\Lenovo\OneDrive\Desktop\Chatbot for Customer Service\chatbot.py", line 32, in get_response
+    processed_input = self.preprocess(user_input)
+  File "c:\Users\Lenovo\OneDrive\Desktop\Chatbot for Customer Service\chatbot.py", line 27, in preprocess
+    tokens = nltk.word_tokenize(text)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\__init__.py", line 142, in word_tokenize
+    sentences = [text] if preserve_line else sent_tokenize(text, language)
+                                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\__init__.py", line 119, in sent_tokenize
+    tokenizer = _get_punkt_tokenizer(language)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\__init__.py", line 105, in _get_punkt_tokenizer
+    return PunktTokenizer(language)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\punkt.py", line 1744, in __init__
+    self.load_lang(lang)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\punkt.py", line 1749, in load_lang
+    lang_dir = find(f"tokenizers/punkt_tab/{lang}/")
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\data.py", line 696, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource 'punkt_tab' not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  >>> import nltk
+  >>> nltk.download('punkt_tab')
+
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load 'tokenizers/punkt_tab/english/'
+
+  Searched in:
+    - 'C:\\Users\\Lenovo/nltk_data'
+    - 'C:\\Python314\\nltk_data'
+    - 'C:\\Python314\\share\\nltk_data'
+    - 'C:\\Python314\\lib\\nltk_data'
+    - 'C:\\Users\\Lenovo\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+127.0.0.1 - - [22/Mar/2026 12:22:04] "OPTIONS /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:22:05] "POST /chat HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\Lenovo\OneDrive\Desktop\Chatbot for Customer Service\app.py", line 27, in chat
+    response = bot.get_response(user_input)
+  File "c:\Users\Lenovo\OneDrive\Desktop\Chatbot for Customer Service\chatbot.py", line 32, in get_response
+    processed_input = self.preprocess(user_input)
+  File "c:\Users\Lenovo\OneDrive\Desktop\Chatbot for Customer Service\chatbot.py", line 27, in preprocess
+    tokens = nltk.word_tokenize(text)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\__init__.py", line 142, in word_tokenize
+    sentences = [text] if preserve_line else sent_tokenize(text, language)
+                                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\__init__.py", line 119, in sent_tokenize
+    tokenizer = _get_punkt_tokenizer(language)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\__init__.py", line 105, in _get_punkt_tokenizer
+    return PunktTokenizer(language)
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\punkt.py", line 1744, in __init__
+    self.load_lang(lang)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\tokenize\punkt.py", line 1749, in load_lang
+    lang_dir = find(f"tokenizers/punkt_tab/{lang}/")
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\nltk\data.py", line 696, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource 'punkt_tab' not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  >>> import nltk
+  >>> nltk.download('punkt_tab')
+
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load 'tokenizers/punkt_tab/english/'
+
+  Searched in:
+    - 'C:\\Users\\Lenovo/nltk_data'
+    - 'C:\\Python314\\nltk_data'
+    - 'C:\\Python314\\share\\nltk_data'
+    - 'C:\\Python314\\lib\\nltk_data'
+    - 'C:\\Users\\Lenovo\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+ * Detected change in 'c:\\Users\\Lenovo\\OneDrive\\Desktop\\Chatbot for Customer Service\\chatbot.py', reloading
+ * Restarting with stat
+[nltk_data] Downloading package punkt_tab to
+[nltk_data]     C:\Users\Lenovo\AppData\Roaming\nltk_data...
+[nltk_data]   Unzipping tokenizers\punkt_tab.zip.
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\Lenovo\AppData\Roaming\nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+ * Debugger is active!
+ * Debugger PIN: 942-952-769
+127.0.0.1 - - [22/Mar/2026 12:23:21] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [22/Mar/2026 12:23:22] "GET /style.css HTTP/1.1" 304 -
+127.0.0.1 - - [22/Mar/2026 12:23:22] "GET /script.js HTTP/1.1" 304 -
+127.0.0.1 - - [22/Mar/2026 12:30:49] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:31:35] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:31:52] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:32:08] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:32:49] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:32:57] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:37:02] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [22/Mar/2026 12:37:02] "GET /style.css HTTP/1.1" 304 -
+127.0.0.1 - - [22/Mar/2026 12:37:02] "GET /script.js HTTP/1.1" 304 -
+127.0.0.1 - - [22/Mar/2026 12:37:02] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [22/Mar/2026 12:38:48] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:38:56] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:40:36] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [22/Mar/2026 12:40:36] "GET /style.css HTTP/1.1" 304 -
+127.0.0.1 - - [22/Mar/2026 12:40:36] "GET /script.js HTTP/1.1" 304 -
+127.0.0.1 - - [22/Mar/2026 12:41:54] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [22/Mar/2026 12:41:54] "GET /style.css HTTP/1.1" 304 -
+127.0.0.1 - - [22/Mar/2026 12:41:54] "GET /script.js HTTP/1.1" 304 -
+127.0.0.1 - - [22/Mar/2026 12:42:00] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:42:11] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:42:22] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:42:41] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:42:58] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:43:09] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:43:14] "POST /chat HTTP/1.1" 200 -
+ * Detected change in 'c:\\Users\\Lenovo\\OneDrive\\Desktop\\Chatbot for Customer Service\\chatbot.py', reloading
+ * Restarting with stat
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\Lenovo\AppData\Roaming\nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+ * Debugger is active!
+ * Debugger PIN: 942-952-769
+127.0.0.1 - - [22/Mar/2026 12:47:35] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:48:00] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:48:17] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:48:35] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:48:51] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:49:08] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:52:53] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:52:58] "GET /script.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:52:58] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:52:59] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [22/Mar/2026 12:53:05] "OPTIONS /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:53:06] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:53:18] "OPTIONS /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:53:18] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:53:25] "OPTIONS /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:53:25] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:53:46] "OPTIONS /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:53:47] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:53:51] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:54:01] "OPTIONS /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:54:02] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:54:06] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:54:13] "OPTIONS /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:54:13] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:54:21] "OPTIONS /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:54:21] "POST /chat HTTP/1.1" 200 -
+127.0.0.1 - - [22/Mar/2026 12:56:53] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [22/Mar/2026 12:56:55] "GET /style.css HTTP/1.1" 304 -
+127.0.0.1 - - [22/Mar/2026 12:56:55] "GET /script.js HTTP/1.1" 304 -
+127.0.0.1 - - [22/Mar/2026 12:56:56] "GET /favicon.ico HTTP/1.1" 404 -
